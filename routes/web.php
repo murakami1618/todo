@@ -16,7 +16,3 @@ use Illuminate\Http\Request;
 Route::post('/task','TaskController@form');
 Route::post("/task/delete",'TaskController@delete');
 Route::get("/tasklist","TaskController@sort");
-
-Route::get('/N', function () {
-    return view('N');
-});
