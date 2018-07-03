@@ -29,14 +29,13 @@ class TaskController extends Controller
 
         $searchKey = request()->get("searchkey");
         if($searchKey){
-            $tasks = DB::select("select * from tasks where g like ?",["%$searchKey%"]);
+            $tasks = DB::select("select * from tasks where g <= $searchKey ORDER BY g");
         }else{
             $tasks = DB::select("select * from tasks");
         }
-        return view("tasklist", [
-            "message" => "hello world",
-            "tasks" => $tasks
-        ]);
-
+        return view("tasklist", ["tasks" => $tasks]);
     }
+
 }
+
+

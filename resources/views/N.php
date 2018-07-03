@@ -8,3 +8,4 @@
 <link href="/css/common.css" rel="stylesheet">
 <h3>ラーメン一覧</h3>
 </html>
+
